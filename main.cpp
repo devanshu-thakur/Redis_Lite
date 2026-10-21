@@ -12,16 +12,17 @@ void storage(string &head,string &key,string &value){
     }
     else if(head=="get"){
         auto it=mpp.find(key);
-        if(it->first==key){
-            cout<<it->second<<endl;
-        }
-        else{
-            cout<<"nil\n";
+        if (it != mpp.end()) {
+            cout << it->second << "\n";
+        } else {
+            cout << "(nil)\n";
         }
     }
     else if(head=="del"){
         auto it=mpp.find(key);
-        mpp.erase(it);
+        if(it!=mpp.end()){
+            mpp.erase(it);
+        }
     }
 }
 
@@ -114,6 +115,9 @@ int main(){
         }
         else if(input=="exit"){
             return 0;
+        }
+        else{
+            cout<<"error...\n";
         }
     }
     return 0;
