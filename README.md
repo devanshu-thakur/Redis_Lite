@@ -16,6 +16,7 @@ Redis-Lite stores records directly in RAM for rapid lookups and mutates an **App
 ## Supported Commands
 
 | Command | Description | Example |
+| :--- | :--- | :--- |
 | `set <key> <val>` | Insert or overwrite a key-value record | `set name Devanshu` |
 | `get <key>` | Fetch the value associated with a key | `get name` |
 | `del <key>` | Logically remove a record | `del name` |
